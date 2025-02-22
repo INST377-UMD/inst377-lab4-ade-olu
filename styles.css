@@ -61,6 +61,7 @@ input {
 button {
   font-family: "Atkinson Hyperlegible Next", sans-serif !important;
   font-size: 16px !important;
+  font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: 1px solid #1b1c1f;
