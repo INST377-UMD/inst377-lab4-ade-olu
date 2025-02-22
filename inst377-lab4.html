@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>INST 377 (0104) - Lab 4</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <h1>INST 377 - Lab 4</h1>
+    
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Alert Me Section -->
+      <div class="section">
+        <!-- Form -->
+        <form id="alert-me-form">
+          <!-- Name Input-->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <!-- Alert Me Button -->
+          <button type="submit" id="alert-me-btn">Alert Me</button>
+        </form>
+      </div>
+
+      <!-- Change Color Section -->
+      <div class="section">
+        <!-- Change Color Button -->
+        <button id="change-color-btn">Change Color</button>
+      </div>
+
+      <!-- Text Tester Section -->
+      <div class="section">
+        <!-- Form -->
+        <form id="text-tester-form">
+          <!-- Name Input-->
+          <label for="name">Text Tester:</label>
+          <input type="text" id="text-tester" name="text" required />
+          <!-- Validate Text Button -->
+          <button type="submit" id="vali-text-btn">Validate Text</button>
+        </form>
+      </div>
+
+      <!-- Add Text Section -->
+      <div class="section">
+        <!-- Add Text Button -->
+        <button id="add-text-btn">Add Text</button>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Alert Me Function
+        document
+          .getElementById("alert-me-btn")
+          .addEventListener("click", function (event) {
+            let name = document.getElementById("name").value;
+            if (name !== "") {
+              alert("Hi " + name + "!");
+            }
+          });
+
+        // Change Color Function
+        let changeColor = false;
+        document
+          .getElementById("change-color-btn")
+          .addEventListener("click", function () {
+            if (changeColor) {
+              document.body.style.backgroundColor = "#faebd7";
+            } else {
+              document.body.style.backgroundColor = "#7fffd4";
+            }
+            changeColor = !changeColor;
+          });
+
+        // Text Tester Function
+        document
+          .getElementById("vali-text-btn")
+          .addEventListener("click", function (event) {
+            event.preventDefault();
+            let textInput = document.getElementById("text-tester");
+            let text = textInput.value;
+            let validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            if (validation.test(text)) {
+              alert("Special characters are not allowed!");
+            } else {
+              textInput.value = "";
+            }
+          });
+
+        // Add Text Function
+        document
+          .getElementById("add-text-btn")
+          .addEventListener("click", function () {
+            let heading = document.querySelector("h1");
+            heading.textContent += " Add Text";
+          });
+      });
+    </script>
+  </body>
+</html>
