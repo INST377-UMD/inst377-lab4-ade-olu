@@ -1,0 +1,70 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* Body */
+body {
+  font-family: "Atkinson Hyperlegible Next", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  color: #1b1c1f;
+  background-color: #faebd7;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+/* Section */
+.section {
+  width: 30rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  border-radius: 10px;
+  background-color: beige;
+  border: 1px solid #1b1c1f;
+}
+
+/* Form Input */
+input {
+  font-family: "Atkinson Hyperlegible Next", sans-serif !important;
+  font-size: 16px !important;
+  width: 200px;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 2rem;
+  border-radius: 5px;
+  border: 1px solid #1b1c1f;
+}
+
+/* Button */
+button {
+  font-family: "Atkinson Hyperlegible Next", sans-serif !important;
+  font-size: 16px !important;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #1b1c1f;
+  background-color: #1b1c1f;
+  color: #f8f8f8;
+  cursor: pointer;
+}
